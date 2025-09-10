@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GUIAVOZ — Facilitando a Mobilidade e Acessibilidade</title>
+  <meta name="description" content="GUIAVOZ: sistema que auxilia a mobilidade de pessoas com deficiência visual com sensores e áudio-guia." />
+  <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="preload" href="styles/styles.css" as="style" />
+</head>
+<body>
+
+  <!-- Link de pular para conteúdo -->
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
+
+
+
+  <header class="topbar" role="banner">
+    <div class="container topbar-inner">
+      <div class="brand" aria-label="Marca GUIAVOZ">
+        <img src="imgs/logo.png" alt="logo do site" class="brand-logo" />
+        <span class="brand-text">GUIAVOZ</span>
+      </div>
+
+      <nav class="main-nav" aria-label="Principal">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="menu">Menu</button>
+        <ul id="menu" class="menu">
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#como-funciona">Como Funciona</a></li>
+          <li><a href="#impacto">Impacto</a></li>
+          <li><a href="#galeria">Demonstração</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div class="access-tools" aria-label="Ferramentas de acessibilidade">
+        <button id="fontDec" class="btn-ghost" aria-label="Diminuir fonte" title="Diminuir fonte">A−</button>
+        <button id="fontInc" class="btn-ghost" aria-label="Aumentar fonte" title="Aumentar fonte">A+</button>
+        <button id="contrastToggle" class="btn" aria-pressed="false" aria-label="Ativar alto contraste" title="Alto contraste">Alto contraste</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1 class="hero-title">GUIAVOZ</h1>
+          <p class="hero-subtitle">Facilitando a mobilidade e acessibilidade</p>
+          <div class="hero-ctas">
+            <a href="#sobre" class="btn">Saiba mais</a>
+            <a href="#galeria" class="btn-ghost-demo">Ver demonstração</a>
+          </div>
+        </div>
+        <figure class="hero-media" aria-label="Ilustração do projeto">
+          <img src="imgs/imagem1.png" alt="Pessoa com deficiência visual usando o GUIAVOZ para subir escadas com segurança." />
+        </figure>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre" class="section">
+      <div class="container grid-2">
+        <div>
+          <h2>Sobre o projeto</h2>
+          <p>
+            O <strong>GUIAVOZ</strong> é um sistema que apoia a mobilidade de pessoas com deficiência visual.
+            Com sensores em um dispositivo vestível e um aplicativo, o usuário recebe <em>alertas sonoros</em> que indicam
+            escadas, elevadores e direções para destinos específicos em ambientes acadêmicos e além.
+          </p>
+          <ul class="list-check">
+            <li>Alertas por áudio em tempo real</li>
+            <li>Detecção de obstáculos (ex.: escadas)</li>
+            <li>Rotas e direções em ambientes internos</li>
+            <li>Foco em autonomia e segurança</li>
+          </ul>
+        </div>
+        <figure>
+          <img src="imgs/imagem2.png" alt="Diagrama simples mostrando sensor no braço conectado ao aplicativo no celular." />
+          <figcaption>Sensor no braço + app com áudio-guia.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- COMO FUNCIONA -->
+    <section id="como-funciona" class="section alt">
+      <div class="container">
+        <h2>Como funciona</h2>
+        <div class="steps">
+          <article class="card">
+            <div class="icon" aria-hidden="true">📡</div>
+            <h3>1. Sensor detecta</h3>
+            <p>O sensor identifica obstáculos e pontos de interesse (ex.: escadas, elevadores).</p>
+          </article>
+          <article class="card">
+            <div class="icon" aria-hidden="true">📲</div>
+            <h3>2. App recebe</h3>
+            <p>Os dados chegam ao aplicativo via Bluetooth/Beacons.</p>
+          </article>
+          <article class="card">
+            <div class="icon" aria-hidden="true">🎧</div>
+            <h3>3. Áudio-guia</h3>
+            <p>O usuário recebe instruções por voz no fone de ouvido.</p>
+          </article>
+          <article class="card">
+            <div class="icon" aria-hidden="true">🧭</div>
+            <h3>4. Navegação segura</h3>
+            <p>Comandos simples e objetivos orientam o deslocamento com autonomia.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- IMPACTO -->
+    <section id="impacto" class="section">
+      <div class="container">
+        <h2>Impacto</h2>
+        <div class="grid-3">
+          <article class="kpi">
+            <h3>+Acessibilidade</h3>
+            <p>Melhora a experiência em ambientes acadêmicos e públicos.</p>
+          </article>
+          <article class="kpi">
+            <h3>+Autonomia</h3>
+            <p>Reduz a dependência de terceiros para se locomover.</p>
+          </article>
+          <article class="kpi">
+            <h3>+Segurança</h3>
+            <p>Alertas antecipados diminuem riscos em escadas e trajetos.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERIA / DEMONSTRAÇÃO -->
+    <section id="galeria" class="section alt">
+      <div class="container">
+        <h2>Demonstração</h2>
+        <div class="gallery">
+          <figure>
+            <video controls preload="metadata" aria-label="Vídeo demonstrando o GUIAVOZ">
+              <source src="video/video.mp4" type="video/mp4" />
+              Seu navegador não suporta vídeo. Baixe o arquivo <a href="demo.mp4">aqui</a>.
+            </video>
+            <figcaption>Funcionamento do GUIAVOZ em cenário acadêmico.</figcaption>
+            Criado por Flow.
+          </figure>
+          <figure>
+            <img src="imgs/imagem3.png" alt="Quadros mostrando aproximação da escada, alerta sonoro e subida com segurança." />
+            <figcaption>Fluxo de uso em 4 etapas.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="section">
+      <div class="container grid-2">
+        <div>
+          <h2>Contato</h2>
+          <p>Quer saber mais ou colaborar com o projeto? Envie uma mensagem:</p>
+          <form id="contactForm" class="form" aria-describedby="formHelp">
+            <label>
+              <span>Nome</span>
+              <input name="nome" type="text" required autocomplete="name" />
+            </label>
+            <label>
+              <span>E-mail</span>
+              <input name="email" type="email" required autocomplete="email" />
+            </label>
+            <label>
+              <span>Mensagem</span>
+              <textarea name="mensagem" rows="5" required></textarea>
+            </label>
+            <button class="btn" type="submit">Enviar</button>
+            <p id="formHelp" class="help">Responderemos o quanto antes. Seus dados não serão compartilhados.</p>
+          </form>
+        </div>
+        <aside class="contact-quick">
+          <h3>Atalhos</h3>
+          <ul>
+            <li><a href="mailto:seuemail@exemplo.com?subject=Contato%20pela%20FETEPS&body=Olá%20Giovana,%20vi%20o%20GUIAVOZ%20e%20gostaria%20de%20conversar.">Enviar e-mail direto</a></li>
+            <li><a href="#" aria-disabled="true">GitHub do projeto (em breve)</a></li>
+            <li><a href="https://drive.google.com/file/d/1L2_vs25EZSUIpzRx0R827iwrHV7E4aRe/view?usp=drive_link" target="_blank">Documento técnico</a></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>GUIAVOZ — Facilitando a mobilidade e acessibilidade</p>
+      <p class="small">
+        Desenvolvido por Giovana. Projeto acadêmico — Fatec / FETEPS.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Região para anúncios de acessibilidade -->
+  <div class="sr-only" aria-live="polite" id="ariaStatus"></div>
+
+  <script src="scripts/script.js" defer></script>
+</body>
+</html>
