@@ -15,14 +15,43 @@
   }
 
   // Toggle menu mobile
-  const navToggle = document.querySelector('.nav-toggle');
-  const menu = document.getElementById('menu');
-  if (navToggle && menu) {
-    navToggle.addEventListener('click', () => {
-      const open = menu.classList.toggle('open');
-      navToggle.setAttribute('aria-expanded', String(open));
+const navToggle = document.getElementById('nav-toggle');
+const menu = document.getElementById('menu');
+const overlay = document.querySelector('.overlay');
+
+if (navToggle && menu && overlay) {
+  // Atualiza aria-expanded
+  navToggle.addEventListener('change', () => {
+    navToggle.setAttribute('aria-expanded', navToggle.checked);
+  });
+
+  // Fecha menu ao clicar no overlay
+  overlay.addEventListener('click', () => {
+    navToggle.checked = false;
+    navToggle.setAttribute('aria-expanded', 'false');
+  });
+
+  // Fecha menu ao clicar em qualquer link
+  menu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navToggle.checked = false;
+      navToggle.setAttribute('aria-expanded', 'false');
     });
-  }
+  });
+
+  // Fecha menu ao clicar fora do menu ou do toggle
+  document.addEventListener('click', (e) => {
+    if (
+      navToggle.checked && 
+      !menu.contains(e.target) && 
+      e.target !== navToggle &&   
+      e.target !== overlay        
+    ) {
+      navToggle.checked = false;
+      navToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+}
 
   // Controles de fonte
   const clampFont = (px) => Math.max(14, Math.min(22, px));
@@ -42,15 +71,6 @@
     setFont(current - 1);
   });
 
-  // Alto contraste
-  const contrastBtn = document.getElementById('contrastToggle');
-  contrastBtn?.addEventListener('click', () => {
-    const active = body.classList.toggle('hc');
-    contrastBtn.setAttribute('aria-pressed', String(active));
-    localStorage.setItem('gv_contrast', active ? 'on' : 'off');
-    if (status) status.textContent = active ? 'Alto contraste ativado' : 'Alto contraste desativado';
-  });
-
   // Acessibilidade: respeitar reduz-motion
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     document.documentElement.style.setProperty('scroll-behavior','auto');
@@ -62,7 +82,7 @@ const skipLink = document.querySelector('.skip-link');
 const mainContent = document.getElementById('conteudo');
 
 skipLink.addEventListener('click', (e) => {
-  e.preventDefault();        // previne scroll padrão
-  mainContent.setAttribute('tabindex', '-1'); // permite focar
-  mainContent.focus();       // move o foco para o main
+  e.preventDefault();        
+  mainContent.setAttribute('tabindex', '-1'); 
+  mainContent.focus();       
 });
