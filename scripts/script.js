@@ -20,38 +20,61 @@ const menu = document.getElementById('menu');
 const overlay = document.querySelector('.overlay');
 
 if (navToggle && menu && overlay) {
-  // Atualiza aria-expanded
-  navToggle.addEventListener('change', () => {
-    navToggle.setAttribute('aria-expanded', navToggle.checked);
-  });
+  const updateMenu = () => {
+    const isOpen = navToggle.checked;
+    navToggle.setAttribute('aria-expanded', isOpen);
+    overlay.style.display = isOpen ? 'block' : 'none';
+  };
 
-  // Fecha menu ao clicar no overlay
-  overlay.addEventListener('click', () => {
-    navToggle.checked = false;
-    navToggle.setAttribute('aria-expanded', 'false');
-  });
+  // Toggle menu ao clicar no hambúrguer
+const navToggle = document.getElementById('nav-toggle');
+const menu = document.getElementById('menu');
+const overlay = document.querySelector('.overlay');
+
+const updateOverlay = () => {
+  overlay.style.display = navToggle.checked ? 'block' : 'none';
+};
+
+if (navToggle && menu && overlay) {
+  // Toggle do checkbox controla o overlay
+  navToggle.addEventListener('change', updateOverlay);
 
   // Fecha menu ao clicar em qualquer link
   menu.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       navToggle.checked = false;
-      navToggle.setAttribute('aria-expanded', 'false');
+      updateOverlay();
     });
   });
 
-  // Fecha menu ao clicar fora do menu ou do toggle
+  // Fecha menu ao clicar no overlay
+  overlay.addEventListener('click', () => {
+    navToggle.checked = false;
+    updateOverlay();
+  });
+
+  // Fecha menu ao clicar fora do menu e do toggle
   document.addEventListener('click', (e) => {
     if (
       navToggle.checked && 
-      !menu.contains(e.target) && 
-      e.target !== navToggle &&   
-      e.target !== overlay        
+      !menu.contains(e.target) &&
+      e.target !== navToggle &&
+      !e.target.closest('.nav-toggle-label') 
     ) {
       navToggle.checked = false;
-      navToggle.setAttribute('aria-expanded', 'false');
+      updateOverlay();
     }
   });
+
+ 
+  menu.addEventListener('click', (e) => e.stopPropagation());
+  overlay.addEventListener('click', (e) => e.stopPropagation());
 }
+
+ 
+  menu.addEventListener('click', e => e.stopPropagation());
+}
+
 
   // Controles de fonte
   const clampFont = (px) => Math.max(14, Math.min(22, px));
