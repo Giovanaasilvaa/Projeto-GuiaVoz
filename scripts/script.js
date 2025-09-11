@@ -51,16 +51,6 @@
     if (status) status.textContent = active ? 'Alto contraste ativado' : 'Alto contraste desativado';
   });
 
-  // Formulário de contato (demonstração)
-  const form = document.getElementById('contactForm');
-  form?.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const data = new FormData(form);
-    const nome = data.get('nome');
-    alert(`Obrigado, ${nome || 'pessoa'}! Sua mensagem foi registrada (exemplo).`);
-    form.reset();
-  });
-
   // Acessibilidade: respeitar reduz-motion
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     document.documentElement.style.setProperty('scroll-behavior','auto');
