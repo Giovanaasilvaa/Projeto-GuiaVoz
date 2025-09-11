@@ -13,8 +13,6 @@
   <!-- Link de pular para conteúdo -->
   <a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
 
-
-
   <header class="topbar" role="banner">
     <div class="container topbar-inner">
       <div class="brand" aria-label="Marca GUIAVOZ">
@@ -22,8 +20,15 @@
         <span class="brand-text">GUIAVOZ</span>
       </div>
 
+     <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      
       <nav class="main-nav" aria-label="Principal">
-        <button class="nav-toggle" aria-expanded="false" aria-controls="menu">Menu</button>
         <ul id="menu" class="menu">
           <li><a href="#sobre">Sobre</a></li>
           <li><a href="#como-funciona">Como Funciona</a></li>
@@ -33,6 +38,7 @@
         </ul>
       </nav>
 
+    
       <div class="access-tools" aria-label="Ferramentas de acessibilidade">
         <button id="fontDec" class="btn-ghost" aria-label="Diminuir fonte" title="Diminuir fonte">A−</button>
         <button id="fontInc" class="btn-ghost" aria-label="Aumentar fonte" title="Aumentar fonte">A+</button>
@@ -160,22 +166,6 @@
         <div>
           <h2>Contato</h2>
           <p>Quer saber mais ou colaborar com o projeto? Envie uma mensagem:</p>
-          <form id="contactForm" class="form" aria-describedby="formHelp">
-            <label>
-              <span>Nome</span>
-              <input name="nome" type="text" required autocomplete="name" />
-            </label>
-            <label>
-              <span>E-mail</span>
-              <input name="email" type="email" required autocomplete="email" />
-            </label>
-            <label>
-              <span>Mensagem</span>
-              <textarea name="mensagem" rows="5" required></textarea>
-            </label>
-            <button class="btn" type="submit">Enviar</button>
-            <p id="formHelp" class="help">Responderemos o quanto antes. Seus dados não serão compartilhados.</p>
-          </form>
         </div>
         <aside class="contact-quick">
           <h3>Atalhos</h3>
@@ -202,5 +192,6 @@
   <div class="sr-only" aria-live="polite" id="ariaStatus"></div>
 
   <script src="scripts/script.js" defer></script>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 </body>
 </html>
