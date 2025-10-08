@@ -173,13 +173,41 @@
           <ul>
             <li><a href="mailto:seuemail@exemplo.com?subject=Contato%20pela%20FETEPS&body=Olá%20Giovana,%20vi%20o%20GUIAVOZ%20e%20gostaria%20de%20conversar.">Enviar e-mail direto</a></li>
             <li><a href="https://github.com/Giovanaasilvaa/Projeto-GuiaVoz" aria-disabled="false" target="_blank">GitHub do projeto</a></li>
-            <li><a href="https://www.instagram.com/guia_voz?igsh=MXVwZW43Z2NxZndy" target="_blank" rel="noopener">Instagram do projeto</a></li>
+
             <li><a href="https://drive.google.com/file/d/1L2_vs25EZSUIpzRx0R827iwrHV7E4aRe/view?usp=drive_link" target="_blank">Documento técnico</a></li>
+
+              <li><a href="https://www.instagram.com/guia_voz?igsh=MXVwZW43Z2NxZndy" target="_blank" rel="noopener">Instagram do projeto</a></li>
+              
           </ul>
         </aside>
       </div>
     </section>
   </main>
+
+  <!-- Chatbot de Dúvidas -->
+<div id="chatbot" class="chatbot-container">
+    <div class="chatbot-header">
+        <h3>Dúvidas sobre o GUIAVOZ</h3>
+        <button id="closeChatbot" class="close-btn" aria-label="Fechar chat">×</button>
+    </div>
+    <div class="chatbot-messages" id="chatbotMessages">
+        <div class="message bot-message">
+            Olá! Sou o assistente do GUIAVOZ. Como posso ajudar?
+        </div>
+    </div>
+    <div class="chatbot-questions">
+        <button class="question-btn" data-question="1">O que é o GUIAVOZ?</button>
+        <button class="question-btn" data-question="2">Como funciona?</button>
+        <button class="question-btn" data-question="3">Quem pode usar?</button>
+        <button class="question-btn" data-question="4">Onde está disponível?</button>
+    </div>
+</div>
+
+<!-- Botão para abrir o chatbot -->
+<button id="chatbotToggle" class="chatbot-toggle" aria-label="Abrir chat de dúvidas">
+    <span class="chat-icon">💬</span>
+    <span class="chat-text">Tire suas dúvidas</span>
+</button>
 
   <footer class="footer" role="contentinfo">
     <div class="container footer-inner">
@@ -208,6 +236,5 @@
   </script>
 
 </body>
-</html>
 </html>
 
