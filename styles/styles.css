@@ -561,7 +561,7 @@ section#contato {
     bottom: 80px;
     right: 20px;
     width: 320px;
-    height: 420px;
+    height: 520px;
     background: white;
     border-radius: 15px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
@@ -653,8 +653,11 @@ section#contato {
   border-radius: 18px;
   max-width: 85%;
   word-wrap: break-word;
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.3;
+  min-height: auto;
+  word-spacing: 0.5px;
+  letter-spacing: 0.2px;
 
   /* Animação das mensagens */
   animation: messageAppear 0.3s ease forwards;
@@ -756,7 +759,7 @@ section#contato {
   color: white;
   border: none;
   border-radius: 25px;
-  padding: 12px 18px;
+  padding: 15px 18px;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -788,7 +791,7 @@ section#contato {
 }
 
 .chat-text {
-  font-size: 13px;
+  font-size: 15px;
 }
 
 /* Scrollbar personalizada */
@@ -822,12 +825,6 @@ section#contato {
   50% {
     box-shadow: 0 4px 15px rgba(44, 90, 160, 0.5);
   }
-}
-
-.message {
-    min-height: auto;
-    word-spacing: 0.5px;
-    letter-spacing: 0.2px;
 }
 
 
