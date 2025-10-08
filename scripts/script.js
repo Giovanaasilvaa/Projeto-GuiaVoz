@@ -109,3 +109,62 @@ skipLink.addEventListener('click', (e) => {
   mainContent.setAttribute('tabindex', '-1'); 
   mainContent.focus();       
 });
+
+// Chatbot functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const chatbot = document.getElementById('chatbot');
+    const chatbotToggle = document.getElementById('chatbotToggle');
+    const closeChatbot = document.getElementById('closeChatbot');
+    const chatbotMessages = document.getElementById('chatbotMessages');
+    const questionButtons = document.querySelectorAll('.question-btn');
+
+    // Respostas pré-programadas
+    const responses = {
+        1: "O GUIAVOZ é um sistema inovador que auxilia na mobilidade de pessoas com deficiência visual. Utilizando sensores e um aplicativo, ele fornece alertas sonoros sobre obstáculos como escadas, elevadores e direções para ambientes internos.",
+        2: "O sistema funciona em 4 etapas: 1) Sensores detectam obstáculos, 2) Dados são enviados ao app via Bluetooth, 3) Alertas sonoros são emitidos, 4) Usuário navega com segurança usando áudio-guias em tempo real.",
+        3: "O GUIAVOZ foi desenvolvido principalmente para pessoas com deficiência visual, mas também pode beneficiar idosos com mobilidade reduzida ou qualquer pessoa que precise de orientação em ambientes complexos como universidades e hospitais.",
+        4: "Atualmente o projeto está em fase de desenvolvimento e testes em ambientes acadêmicos. Estamos trabalhando para expandir para outros espaços públicos como shoppings, estações de transporte e centros urbanos."
+    };
+
+    // Alternar visibilidade do chatbot
+    chatbotToggle.addEventListener('click', function() {
+        chatbot.classList.toggle('active');
+    });
+
+    // Fechar chatbot
+    closeChatbot.addEventListener('click', function() {
+        chatbot.classList.remove('active');
+    });
+
+    // Adicionar perguntas ao chat
+    questionButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const questionNumber = this.getAttribute('data-question');
+            const questionText = this.textContent;
+            const response = responses[questionNumber];
+
+            // Adicionar pergunta do usuário
+            addMessage(questionText, 'user');
+            
+            // Adicionar resposta após um pequeno delay
+            setTimeout(() => {
+                addMessage(response, 'bot');
+            }, 500);
+        });
+    });
+
+    function addMessage(text, type) {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `message ${type}-message`;
+        messageDiv.textContent = text;
+        chatbotMessages.appendChild(messageDiv);
+        chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+    }
+
+    // Fechar chatbot ao clicar fora 
+    document.addEventListener('click', function(event) {
+        if (!chatbot.contains(event.target) && !chatbotToggle.contains(event.target) && chatbot.classList.contains('active')) {
+            chatbot.classList.remove('active');
+        }
+    });
+});
