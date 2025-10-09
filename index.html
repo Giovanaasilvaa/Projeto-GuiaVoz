@@ -17,18 +17,18 @@
   <header class="topbar" role="banner">
     <div class="container topbar-inner">
       <div class="brand" aria-label="Marca GUIAVOZ">
-        <img src="imgs/logo.png" alt="logo do site" class="brand-logo" />
+        <img src="imgs/logosemfundo.png" alt="logo do site" class="brand-logo" />
         <span class="brand-text">GUIAVOZ</span>
       </div>
 
-     <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
       <label for="nav-toggle" class="nav-toggle-label">
         <span></span>
         <span></span>
         <span></span>
       </label>
 
-<div class="overlay"></div>
+      <div class="overlay"></div>
 
       <nav class="main-nav" aria-label="Principal">
         <ul id="menu" class="menu">
@@ -40,7 +40,6 @@
         </ul>
       </nav>
 
-    
       <div class="access-tools" aria-label="Ferramentas de acessibilidade">
         <button id="fontDec" class="btn-ghost" aria-label="Diminuir fonte" title="Diminuir fonte">A−</button>
         <button id="fontInc" class="btn-ghost" aria-label="Aumentar fonte" title="Aumentar fonte">A+</button>
@@ -61,7 +60,7 @@
           </div>
         </div>
         <figure class="hero-media" aria-label="Ilustração do projeto">
-          <img src="imgs/imagem1.png" alt="Pessoa com deficiência visual usando o GUIAVOZ para subir escadas com segurança." />
+          <img src="imgs/logodosite.png" alt="Pessoa com deficiência visual usando o GUIAVOZ para subir escadas com segurança." />
         </figure>
       </div>
     </section>
@@ -173,11 +172,13 @@
           <ul>
             <li><a href="mailto:seuemail@exemplo.com?subject=Contato%20pela%20FETEPS&body=Olá%20Giovana,%20vi%20o%20GUIAVOZ%20e%20gostaria%20de%20conversar.">Enviar e-mail direto</a></li>
             <li><a href="https://github.com/Giovanaasilvaa/Projeto-GuiaVoz" aria-disabled="false" target="_blank">GitHub do projeto</a></li>
-
             <li><a href="https://drive.google.com/file/d/1L2_vs25EZSUIpzRx0R827iwrHV7E4aRe/view?usp=drive_link" target="_blank">Documento técnico</a></li>
-
-              <li><a href="https://www.instagram.com/guia_voz?igsh=MXVwZW43Z2NxZndy" target="_blank" rel="noopener">Instagram do projeto</a></li>
-              
+            <li><a href="https://www.instagram.com/guia_voz?igsh=MXVwZW43Z2NxZndy" target="_blank" rel="noopener" class="instagram-link">
+              <svg class="instagram-icon" viewBox="0 0 24 24" width="20" height="20">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+              <span class="social-text">Instagram do projeto</span>
+            </a></li>
           </ul>
         </aside>
       </div>
@@ -185,29 +186,29 @@
   </main>
 
   <!-- Chatbot de Dúvidas -->
-<div id="chatbot" class="chatbot-container">
+  <div id="chatbot" class="chatbot-container">
     <div class="chatbot-header">
-        <h3>Dúvidas sobre o GUIAVOZ</h3>
-        <button id="closeChatbot" class="close-btn" aria-label="Fechar chat">×</button>
+      <h3>Dúvidas sobre o GUIAVOZ</h3>
+      <button id="closeChatbot" class="close-btn" aria-label="Fechar chat">×</button>
     </div>
     <div class="chatbot-messages" id="chatbotMessages">
-        <div class="message bot-message">
-            Olá! Sou o assistente do GUIAVOZ. Como posso ajudar?
-        </div>
+      <div class="message bot-message">
+        Olá! Sou o assistente do GUIAVOZ. Como posso ajudar?
+      </div>
     </div>
     <div class="chatbot-questions">
-        <button class="question-btn" data-question="1">O que é o GUIAVOZ?</button>
-        <button class="question-btn" data-question="2">Como funciona?</button>
-        <button class="question-btn" data-question="3">Quem pode usar?</button>
-        <button class="question-btn" data-question="4">Onde está disponível?</button>
+      <button class="question-btn" data-question="1">O que é o GUIAVOZ?</button>
+      <button class="question-btn" data-question="2">Como funciona?</button>
+      <button class="question-btn" data-question="3">Quem pode usar?</button>
+      <button class="question-btn" data-question="4">Onde está disponível?</button>
     </div>
-</div>
+  </div>
 
-<!-- Botão para abrir o chatbot -->
-<button id="chatbotToggle" class="chatbot-toggle" aria-label="Abrir chat de dúvidas">
+  <!-- Botão para abrir o chatbot -->
+  <button id="chatbotToggle" class="chatbot-toggle" aria-label="Abrir chat de dúvidas">
     <span class="chat-icon">💬</span>
     <span class="chat-text">Tire suas dúvidas</span>
-</button>
+  </button>
 
   <footer class="footer" role="contentinfo">
     <div class="container footer-inner">
@@ -218,9 +219,8 @@
     </div>
   </footer>
 
-    <!-- Região para anúncios de acessibilidade -->
+  <!-- Região para anúncios de acessibilidade -->
   <div class="sr-only" aria-live="polite" id="ariaStatus"></div>
-
 
   <script src="scripts/script.js" defer></script>
 
@@ -237,4 +237,3 @@
 
 </body>
 </html>
-
