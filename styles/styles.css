@@ -356,7 +356,7 @@ body {
   width: 100%;
   height: 100%;
   background: radial-gradient(circle at 30% 20%, rgba(63, 140, 255, 0.1) 0%, transparent 50%),
-              radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
+    radial-gradient(circle at 80% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
   z-index: 1;
 }
 
@@ -717,25 +717,25 @@ section#contato {
 /* Chatbot de Dúvidas */
 
 .chatbot-container {
-    position: fixed;
-    bottom: 80px;
-    right: 20px;
-    width: 320px;
-    height: 520px;
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-    display: flex;
-    flex-direction: column;
-    z-index: 1001;
-    border: 1px solid #e0e0e0;
-    font-size: 14px;
-    
-    /* Animação de entrada */
-    transform: translateY(20px) scale(0.9);
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 320px;
+  height: 520px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  z-index: 1001;
+  border: 1px solid #e0e0e0;
+  font-size: 14px;
+
+  /* Animação de entrada */
+  transform: translateY(20px) scale(0.9);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .chatbot-container.active {
@@ -890,20 +890,32 @@ section#contato {
   transform: translateX(0) scale(1.02);
 }
 
-.question-btn:nth-child(1) { animation-delay: 0.4s; }
-.question-btn:nth-child(2) { animation-delay: 0.45s; }
-.question-btn:nth-child(3) { animation-delay: 0.5s; }
-.question-btn:nth-child(4) { animation-delay: 0.55s; }
+.question-btn:nth-child(1) {
+  animation-delay: 0.4s;
+}
+
+.question-btn:nth-child(2) {
+  animation-delay: 0.45s;
+}
+
+.question-btn:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+.question-btn:nth-child(4) {
+  animation-delay: 0.55s;
+}
 
 @keyframes buttonAppear {
-    from {
-        opacity: 0;
-        transform: translateX(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .chatbot-toggle {
@@ -974,9 +986,12 @@ section#contato {
 }
 
 @keyframes gentlePulse {
-  0%, 100% {
+
+  0%,
+  100% {
     box-shadow: 0 4px 12px rgba(44, 90, 160, 0.3);
   }
+
   50% {
     box-shadow: 0 4px 15px rgba(44, 90, 160, 0.5);
   }
@@ -1013,7 +1028,7 @@ section#contato {
     right: 10px;
     bottom: 70px;
   }
-    
+
   .chatbot-toggle {
     padding: 10px 16px;
     font-size: 13px;
@@ -1022,12 +1037,12 @@ section#contato {
   .chatbot-header h3 {
     font-size: 15px;
   }
-    
+
   .message {
     font-size: 12px;
     padding: 9px 13px;
   }
-    
+
   .question-btn {
     font-size: 12px;
     padding: 9px 13px;
@@ -1139,4 +1154,411 @@ section#contato {
 
 #nav-toggle:checked+.nav-toggle-label span:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
+/* Tablet - 900px a 680px */
+@media (max-width: 900px) and (min-width: 681px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .hero-media {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .hero-title {
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    margin: 0 auto 1.5rem;
+    text-align: center;
+    max-width: 500px;
+  }
+
+  .hero-ctas {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .grid-2 {
+    gap: 1.5rem;
+  }
+
+  .grid-3 {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .steps {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .card {
+    padding: 1.25rem;
+    min-height: 160px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  section#sobre figure img,
+  section#como-funciona figure img {
+    max-width: 350px;
+  }
+}
+
+/* Mobile Large - 680px a 500px */
+@media (max-width: 680px) and (min-width: 501px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+
+  .section {
+    padding: 2.5rem 0;
+  }
+
+  .hero {
+    padding: 0 1rem;
+    height: auto;
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+  }
+
+  .hero-inner {
+    gap: 1.25rem;
+    padding: 2rem 0;
+    text-align: center;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .hero-media {
+    max-width: 400px;
+  }
+
+  .hero-title {
+    font-size: clamp(1.6rem, 4.5vw, 2.5rem);
+    text-align: center;
+    margin: 0 auto 0.5rem;
+    width: 100%;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+    max-width: 400px;
+    text-align: center;
+    margin: 0 auto 1.5rem;
+  }
+
+  .hero-ctas {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-ctas .btn,
+  .hero-ctas .btn-ghost-demo {
+    width: 100%;
+    max-width: 250px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .hero-media {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .grid-2,
+  .grid-3 {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .steps {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .card {
+    padding: 1rem;
+    min-height: 140px;
+  }
+
+  .gallery {
+    gap: 0.5rem;
+  }
+
+  section#sobre,
+  section#como-funciona,
+  section#impacto,
+  section#galeria,
+  section#contato {
+    padding: 2rem 1rem;
+  }
+
+  section#sobre figure img,
+  section#como-funciona figure img {
+    max-width: 300px;
+  }
+
+  .brand-text {
+    font-size: 1rem;
+  }
+
+  .topbar-inner {
+    min-height: 60px;
+  }
+
+  .brand-logo {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Mobile Small - abaixo de 500px */
+@media (max-width: 500px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .section {
+    padding: 2rem 0;
+  }
+
+  .hero {
+    padding: 0 0.75rem;
+    height: auto;
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .hero-inner {
+    gap: 1rem;
+    padding: 1.5rem 0;
+    text-align: center;
+  }
+
+
+  .hero-media {
+    max-width: 320px;
+  }
+
+  .hero-title {
+    font-size: clamp(1.4rem, 4vw, 2rem);
+    line-height: 1.2;
+    text-align: center;
+    margin: 0 auto 0.5rem;
+    width: 100%;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+    max-width: 300px;
+    text-align: center;
+    margin: 0 auto 1.25rem;
+  }
+
+  .hero-ctas {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-ctas .btn,
+  .hero-ctas .btn-ghost-demo {
+    width: 100%;
+    max-width: 220px;
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+    margin: 0 auto;
+  }
+
+  .grid-2,
+  .grid-3 {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .steps {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .card {
+    padding: 0.875rem;
+    min-height: 120px;
+  }
+
+  .card .icon {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .gallery {
+    gap: 0.5rem;
+  }
+
+  section#sobre,
+  section#como-funciona,
+  section#impacto,
+  section#galeria,
+  section#contato {
+    padding: 1.5rem 0.75rem;
+  }
+
+  section#sobre figure img,
+  section#como-funciona figure img {
+    max-width: 280px;
+  }
+
+  .brand-text {
+    font-size: 0.9rem;
+  }
+
+  .topbar-inner {
+    min-height: 56px;
+    gap: 0.75rem;
+  }
+
+  .brand-logo {
+    width: 36px;
+    height: 36px;
+  }
+
+  .btn,
+  .btn-ghost,
+  .btn-ghost-demo {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+    border-radius: 10px;
+  }
+
+  .chatbot-container {
+    width: 280px;
+    height: 380px;
+    right: 10px;
+    bottom: 60px;
+  }
+
+  .chatbot-toggle {
+    padding: 8px 14px;
+    font-size: 12px;
+    bottom: 15px;
+    right: 15px;
+  }
+}
+
+
+@media (max-width: 360px) {
+  .container {
+    padding: 0 0.75rem;
+  }
+
+  .hero-media {
+    max-width: 280px;
+  }
+
+  .hero-title {
+    font-size: 1.3rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.85rem;
+  }
+
+  section#sobre figure img,
+  section#como-funciona figure img {
+    max-width: 250px;
+  }
+
+  .card {
+    padding: 0.75rem;
+    min-height: 110px;
+  }
+}
+
+
+@media (hover: none) and (pointer: coarse) {
+
+  .menu li a:hover,
+  .btn:hover,
+  .btn-ghost:hover,
+  .btn-ghost-demo:hover,
+  .card:hover,
+  .kpi:hover,
+  .gallery img:hover,
+  .gallery video:hover {
+    transform: none;
+  }
+
+  .menu li a:active,
+  .btn:active,
+  .btn-ghost:active,
+  .btn-ghost-demo:active {
+    transform: scale(0.98);
+  }
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero {
+    height: auto;
+    min-height: 100dvh;
+    padding: 2rem 0;
+  }
+
+  .hero-inner {
+    padding: 1rem 0;
+  }
+
+  .section {
+    padding: 2rem 0;
+  }
+
+  section#sobre,
+  section#como-funciona,
+  section#impacto,
+  section#galeria,
+  section#contato {
+    padding: 2rem 1rem;
+    min-height: auto;
+  }
 }
