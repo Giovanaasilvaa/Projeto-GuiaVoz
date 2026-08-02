@@ -20,32 +20,6 @@
   --base-font-size: 16px;
 }
 
-/* Corrige os cards flutuantes no tema escuro */
-body.dark .floating-card {
-  background: rgba(16, 33, 28, 0.96);
-  border-color: rgba(156, 224, 190, 0.22);
-  color: var(--text);
-  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.38);
-}
-
-body.dark .floating-card small {
-  color: #afc8bd;
-}
-
-body.dark .floating-card strong {
-  color: #f4fff9;
-}
-
-body.dark .status-indicator {
-  background: #2ed184;
-  box-shadow: 0 0 0 7px rgba(46, 209, 132, 0.14);
-}
-
-body.dark .floating-icon {
-  background: #17392e;
-  color: #f4fff9;
-}
-
 body.dark{
 
     --background:#081512;
@@ -1375,5 +1349,315 @@ figcaption {
   .reveal {
     opacity: 1;
     transform: none;
+  }
+}
+
+/* =========================================================
+   AJUSTES DO TEMA ESCURO
+========================================================= */
+
+body.dark .floating-card {
+  background: rgba(16, 33, 28, 0.96);
+  border-color: rgba(156, 224, 190, 0.22);
+  color: var(--text);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.38);
+}
+
+body.dark .floating-card small {
+  color: #afc8bd;
+}
+
+body.dark .floating-card strong {
+  color: #f4fff9;
+}
+
+body.dark .status-indicator {
+  background: #2ed184;
+  box-shadow: 0 0 0 7px rgba(46, 209, 132, 0.14);
+}
+
+body.dark .floating-icon {
+  background: #17392e;
+  color: #f4fff9;
+}
+
+body.dark .eyebrow {
+  border-color: var(--border);
+  background: rgba(16, 33, 28, 0.82);
+}
+
+body.dark .contact-links a {
+  background: #0e1e18;
+}
+
+body.dark .footer small {
+  color: #91aa9f;
+}
+
+/* =========================================================
+   CONTEÚDOS / BLOG
+========================================================= */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: start;
+  gap: 20px;
+}
+
+.blog-card {
+  position: relative;
+  align-self: start;
+  min-height: 0;
+  height: auto;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-7px);
+  border-color: #b8ddca;
+  box-shadow: var(--shadow-md);
+}
+
+.blog-card details {
+  height: auto;
+}
+
+.blog-card summary {
+  display: flex;
+  min-height: 300px;
+  flex-direction: column;
+  padding: 27px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.blog-card summary::-webkit-details-marker {
+  display: none;
+}
+
+.blog-card-category {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 22px;
+  padding: 7px 11px;
+  border-radius: 999px;
+  background: var(--primary-light);
+  color: var(--primary-dark);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.blog-card-icon {
+  display: grid;
+  width: 54px;
+  height: 54px;
+  margin-bottom: 22px;
+  place-items: center;
+  border-radius: 17px;
+  background: var(--primary-light);
+  font-size: 1.55rem;
+}
+
+.blog-card h3 {
+  margin: 0;
+  font-size: 1.12rem;
+  line-height: 1.45;
+}
+
+.blog-card .blog-intro {
+  margin: 12px 0 22px;
+  color: var(--text-soft);
+  font-size: 0.84rem;
+}
+
+.blog-read {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+  color: var(--primary-dark);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.blog-read::after {
+  content: "→";
+  transition: transform 0.2s ease;
+}
+
+.blog-card details[open] .blog-read::after {
+  transform: rotate(90deg);
+}
+
+.blog-content {
+  padding: 0 27px 28px;
+  border-top: 1px solid var(--border);
+}
+
+.blog-content p {
+  font-size: 0.84rem;
+}
+
+.blog-content h4 {
+  margin: 22px 0 9px;
+  font-size: 0.94rem;
+}
+
+.blog-content ul {
+  display: grid;
+  gap: 8px;
+  margin: 13px 0 0;
+  padding-left: 20px;
+  color: var(--text-soft);
+  font-size: 0.82rem;
+}
+
+.blog-note {
+  margin-top: 20px;
+  padding: 15px;
+  border-left: 4px solid var(--primary);
+  border-radius: 0 13px 13px 0;
+  background: var(--primary-light);
+  color: var(--text);
+  font-size: 0.8rem;
+}
+
+.blog-card details[open] summary {
+  min-height: auto;
+  padding-bottom: 20px;
+}
+
+body.dark .blog-card {
+  background: var(--surface);
+}
+
+body.dark .blog-note {
+  background: #17392e;
+}
+
+body.dark .blog-read,
+body.dark .blog-card-category {
+  color: #9ce0be;
+}
+
+/* =========================================================
+   PERFIL DO PROJETO
+========================================================= */
+
+.profile-row {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  margin-top: 19px;
+}
+
+.profile-avatar {
+  display: grid;
+  width: 62px;
+  height: 62px;
+  flex: 0 0 62px;
+  place-items: center;
+  border-radius: 20px;
+  background: linear-gradient(145deg, var(--primary), var(--primary-dark));
+  color: var(--white);
+  font-size: 1.45rem;
+  font-weight: 800;
+}
+
+.profile-row strong,
+.profile-row span {
+  display: block;
+}
+
+.profile-row strong {
+  font-size: 0.9rem;
+}
+
+.profile-row span {
+  color: var(--text-soft);
+  font-size: 0.75rem;
+}
+
+/* =========================================================
+   ROADMAP
+========================================================= */
+
+.roadmap-list {
+  display: grid;
+  gap: 11px;
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.roadmap-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-soft);
+  font-size: 0.82rem;
+}
+
+.roadmap-list li::before {
+  content: "";
+  width: 11px;
+  height: 11px;
+  flex: 0 0 11px;
+  border: 3px solid var(--border);
+  border-radius: 50%;
+}
+
+.roadmap-list li.done::before {
+  border-color: var(--primary);
+  background: var(--primary);
+  box-shadow: 0 0 0 4px rgba(27, 138, 90, 0.12);
+}
+
+/* =========================================================
+   BOTÃO DE TEMA
+========================================================= */
+
+#themeToggle {
+  line-height: 1;
+}
+
+/* =========================================================
+   RESPONSIVIDADE DOS CONTEÚDOS
+========================================================= */
+
+@media (max-width: 1000px) {
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-card,
+  .blog-card summary {
+    min-height: auto;
+  }
+
+  .blog-card summary {
+    padding: 23px;
+  }
+
+  .blog-content {
+    padding: 0 23px 24px;
   }
 }
