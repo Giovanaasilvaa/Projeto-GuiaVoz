@@ -3,24 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="GUIAVOZ: tecnologia assistiva para apoiar a mobilidade de pessoas com deficiência visual em ambientes internos.">
+
+  <meta
+    name="description"
+    content="GUIAVOZ: tecnologia assistiva para apoiar a mobilidade de pessoas com deficiência visual em ambientes internos."
+  >
   <meta name="theme-color" content="#1b8a5a">
 
   <title>GUIAVOZ | Mobilidade e acessibilidade</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
   <link rel="icon" href="imgs/logoguia.png" type="image/png">
   <link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <body>
-  <a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
+  <a class="skip-link" href="#conteudo">
+    Pular para o conteúdo principal
+  </a>
 
   <header class="topbar" id="topbar">
     <div class="container topbar-inner">
-      <a class="brand" href="#inicio" aria-label="Ir para o início do site GUIAVOZ">
+      <a
+        class="brand"
+        href="#inicio"
+        aria-label="Ir para o início do site GUIAVOZ"
+      >
         <span class="brand-symbol">
           <img src="imgs/logosemfundo.png" alt="">
         </span>
@@ -40,30 +55,61 @@
         <span></span>
       </button>
 
-      <nav class="main-nav" id="mainMenu" aria-label="Navegação principal">
+      <nav
+        class="main-nav"
+        id="mainMenu"
+        aria-label="Navegação principal"
+      >
         <a href="#sobre">Sobre</a>
         <a href="#como-funciona">Como funciona</a>
         <a href="#recursos">Recursos</a>
+        <a href="#conteudos">Conteúdos</a>
         <a href="#demonstracao">Demonstração</a>
         <a href="#contato">Contato</a>
       </nav>
 
-      <div class="access-tools" aria-label="Ferramentas de acessibilidade">
-        <button class="icon-button" id="fontDec" type="button" aria-label="Diminuir tamanho da fonte">A−</button>
-        <button class="icon-button" id="fontInc" type="button" aria-label="Aumentar tamanho da fonte">A+</button>
+      <div
+        class="access-tools"
+        aria-label="Ferramentas de acessibilidade"
+      >
         <button
-id="themeToggle"
-class="icon-button"
-title="Tema escuro">
+          class="icon-button"
+          id="fontDec"
+          type="button"
+          aria-label="Diminuir tamanho da fonte"
+          title="Diminuir fonte"
+        >
+          A−
+        </button>
 
-🌙
+        <button
+          class="icon-button"
+          id="fontInc"
+          type="button"
+          aria-label="Aumentar tamanho da fonte"
+          title="Aumentar fonte"
+        >
+          A+
+        </button>
 
-</button>
+        <button
+          class="icon-button"
+          id="themeToggle"
+          type="button"
+          aria-label="Ativar tema escuro"
+          title="Tema escuro"
+        >
+          🌙
+        </button>
       </div>
     </div>
   </header>
 
-  <div class="menu-overlay" id="menuOverlay" aria-hidden="true"></div>
+  <div
+    class="menu-overlay"
+    id="menuOverlay"
+    aria-hidden="true"
+  ></div>
 
   <main id="conteudo" tabindex="-1">
     <section class="hero" id="inicio">
@@ -80,29 +126,41 @@ title="Tema escuro">
           <h1>Mais autonomia para se movimentar com segurança.</h1>
 
           <p class="hero-description">
-            O GUIAVOZ conecta sensores e aplicativo para oferecer alertas por voz,
-            vibração e som a pessoas com deficiência visual.
+            O GUIAVOZ conecta sensores e aplicativo para oferecer
+            alertas por voz, vibração e som a pessoas com deficiência visual.
           </p>
 
           <div class="hero-actions">
-            <a class="button button-primary" href="#como-funciona">
+            <a
+              class="button button-primary"
+              href="#como-funciona"
+            >
               Conhecer o projeto
               <span aria-hidden="true">→</span>
             </a>
-            <a class="button button-secondary" href="#demonstracao">
+
+            <a
+              class="button button-secondary"
+              href="#demonstracao"
+            >
               Ver demonstração
             </a>
           </div>
 
-          <div class="hero-highlights" aria-label="Destaques do projeto">
+          <div
+            class="hero-highlights"
+            aria-label="Destaques do projeto"
+          >
             <div>
               <strong>Bluetooth</strong>
               <span>Comunicação em tempo real</span>
             </div>
+
             <div>
               <strong>Acessível</strong>
               <span>Voz, som e vibração</span>
             </div>
+
             <div>
               <strong>Modular</strong>
               <span>Expansível para novos espaços</span>
@@ -113,22 +171,31 @@ title="Tema escuro">
         <div class="hero-visual reveal">
           <div class="app-preview">
             <div class="preview-glow"></div>
+
             <img
               src="imgs/logo.png"
               alt="Ilustração do projeto GUIAVOZ auxiliando uma pessoa com deficiência visual"
             >
           </div>
 
-          <div class="floating-card floating-card-status" aria-hidden="true">
+          <div
+            class="floating-card floating-card-status"
+            aria-hidden="true"
+          >
             <span class="status-indicator"></span>
+
             <div>
               <small>Status do sensor</small>
               <strong>Conectado</strong>
             </div>
           </div>
 
-          <div class="floating-card floating-card-alert" aria-hidden="true">
+          <div
+            class="floating-card floating-card-alert"
+            aria-hidden="true"
+          >
             <span class="floating-icon">🔊</span>
+
             <div>
               <small>Alerta ativo</small>
               <strong>Escada próxima</strong>
@@ -142,15 +209,19 @@ title="Tema escuro">
       <div class="container about-grid">
         <div class="section-copy reveal">
           <span class="section-label">Sobre o projeto</span>
+
           <h2>Tecnologia criada para ampliar a independência.</h2>
+
           <p>
-            O GUIAVOZ é um projeto acadêmico de tecnologia assistiva que busca
-            facilitar a mobilidade de pessoas com deficiência visual em universidades,
-            hospitais e outros ambientes internos.
+            O GUIAVOZ é um projeto acadêmico de tecnologia assistiva
+            que busca facilitar a mobilidade de pessoas com deficiência
+            visual em universidades, hospitais e outros ambientes internos.
           </p>
+
           <p>
-            Sensores instalados em pontos estratégicos comunicam-se com o aplicativo,
-            que transforma as informações recebidas em avisos simples e objetivos.
+            Sensores instalados em pontos estratégicos comunicam-se com
+            o aplicativo, que transforma as informações recebidas em
+            avisos simples e objetivos.
           </p>
 
           <ul class="feature-list">
@@ -168,8 +239,10 @@ title="Tema escuro">
               alt="Diagrama do sensor GUIAVOZ enviando informações para o aplicativo"
             >
           </div>
+
           <figcaption>
-            Sensores identificam pontos de atenção e enviam os dados ao aplicativo por Bluetooth.
+            Sensores identificam pontos de atenção e enviam os
+            dados ao aplicativo por Bluetooth.
           </figcaption>
         </figure>
       </div>
@@ -179,37 +252,61 @@ title="Tema escuro">
       <div class="container">
         <div class="section-heading reveal">
           <span class="section-label">Como funciona</span>
+
           <h2>Informação no momento certo, de forma simples.</h2>
-          <p>O funcionamento do GUIAVOZ acontece em quatro etapas integradas.</p>
+
+          <p>
+            O funcionamento do GUIAVOZ acontece em quatro etapas integradas.
+          </p>
         </div>
 
         <div class="steps-grid">
           <article class="step-card reveal">
             <span class="step-number">01</span>
             <span class="step-icon" aria-hidden="true">📡</span>
+
             <h3>Detecção</h3>
-            <p>O sensor identifica a proximidade de escadas, portas e outros pontos relevantes.</p>
+
+            <p>
+              O sensor identifica a proximidade de escadas,
+              portas e outros pontos relevantes.
+            </p>
           </article>
 
           <article class="step-card reveal">
             <span class="step-number">02</span>
             <span class="step-icon" aria-hidden="true">📲</span>
+
             <h3>Comunicação</h3>
-            <p>As informações são enviadas ao aplicativo por meio de uma conexão Bluetooth.</p>
+
+            <p>
+              As informações são enviadas ao aplicativo
+              por meio de uma conexão Bluetooth.
+            </p>
           </article>
 
           <article class="step-card reveal">
             <span class="step-number">03</span>
             <span class="step-icon" aria-hidden="true">🔊</span>
+
             <h3>Alerta</h3>
-            <p>O aplicativo comunica o risco por voz, som ou vibração, conforme a preferência.</p>
+
+            <p>
+              O aplicativo comunica o risco por voz, som ou
+              vibração, conforme a preferência.
+            </p>
           </article>
 
           <article class="step-card reveal">
             <span class="step-number">04</span>
             <span class="step-icon" aria-hidden="true">🧭</span>
+
             <h3>Orientação</h3>
-            <p>O usuário recebe uma indicação objetiva para continuar o trajeto com segurança.</p>
+
+            <p>
+              O usuário recebe uma indicação objetiva para
+              continuar o trajeto com segurança.
+            </p>
           </article>
         </div>
       </div>
@@ -219,13 +316,19 @@ title="Tema escuro">
       <div class="container">
         <div class="section-heading reveal">
           <span class="section-label">Recursos</span>
+
           <h2>Uma experiência configurável e acessível.</h2>
-          <p>O aplicativo permite adaptar os alertas às necessidades de cada usuário.</p>
+
+          <p>
+            O aplicativo permite adaptar os alertas às necessidades
+            de cada usuário.
+          </p>
         </div>
 
         <div class="resource-grid">
           <article class="resource-card reveal">
             <span class="resource-icon" aria-hidden="true">🎙️</span>
+
             <div>
               <h3>Orientação por voz</h3>
               <p>Mensagens faladas descrevem o ponto de atenção detectado.</p>
@@ -234,26 +337,281 @@ title="Tema escuro">
 
           <article class="resource-card reveal">
             <span class="resource-icon" aria-hidden="true">📳</span>
+
             <div>
               <h3>Alerta por vibração</h3>
-              <p>Uma alternativa discreta para locais públicos ou ambientes silenciosos.</p>
+              <p>
+                Uma alternativa discreta para locais públicos
+                ou ambientes silenciosos.
+              </p>
             </div>
           </article>
 
           <article class="resource-card reveal">
             <span class="resource-icon" aria-hidden="true">🔔</span>
+
             <div>
               <h3>Alerta sonoro</h3>
-              <p>Sinais objetivos reforçam a percepção de obstáculos próximos.</p>
+              <p>
+                Sinais objetivos reforçam a percepção de obstáculos próximos.
+              </p>
             </div>
           </article>
 
           <article class="resource-card reveal">
             <span class="resource-icon" aria-hidden="true">♿</span>
+
             <div>
               <h3>Acessibilidade digital</h3>
-              <p>Interface clara, botões grandes e suporte ao leitor de tela.</p>
+              <p>
+                Interface clara, botões grandes e suporte ao leitor de tela.
+              </p>
             </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTEÚDOS EM FORMATO DE BLOG -->
+    <section class="section section-soft" id="conteudos">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="section-label">Conteúdos do projeto</span>
+
+          <h2>Decisões, bastidores e evolução do GUIAVOZ.</h2>
+
+          <p>
+            Abra os cartões para conhecer as escolhas técnicas,
+            as pessoas envolvidas e os próximos passos do projeto.
+          </p>
+        </div>
+
+        <div class="blog-grid">
+          <article class="blog-card reveal">
+            <details>
+              <summary>
+                <span class="blog-card-category">Tecnologia</span>
+                <span class="blog-card-icon" aria-hidden="true">📶</span>
+
+                <h3>Por que usar Bluetooth Low Energy no ESP32?</h3>
+
+                <p class="blog-intro">
+                  Entenda por que o BLE é adequado para a comunicação
+                  entre os sensores e o aplicativo.
+                </p>
+
+                <span class="blog-read">Ler conteúdo</span>
+              </summary>
+
+              <div class="blog-content">
+                <p>
+                  O ESP32 é o microcontrolador utilizado no protótipo
+                  e já possui suporte a Bluetooth. O BLE é o modo de
+                  comunicação escolhido para transmitir os dados ao celular.
+                </p>
+
+                <h4>Principais vantagens</h4>
+
+                <ul>
+                  <li>Menor consumo de energia do que conexões Wi-Fi contínuas.</li>
+                  <li>Comunicação direta com smartphones, sem depender de internet.</li>
+                  <li>Resposta rápida para alertas de proximidade.</li>
+                  <li>Possibilidade de trabalhar com diferentes módulos e ambientes.</li>
+                  <li>Amplo suporte em dispositivos Android.</li>
+                </ul>
+
+                <p class="blog-note">
+                  O BLE não substitui o ESP32: ele é uma tecnologia
+                  de comunicação disponível no próprio microcontrolador.
+                </p>
+              </div>
+            </details>
+          </article>
+
+          <article class="blog-card reveal">
+            <details>
+              <summary>
+                <span class="blog-card-category">Bastidores</span>
+                <span class="blog-card-icon" aria-hidden="true">👩‍💻</span>
+
+                <h3>Conheça quem está por trás deste projeto</h3>
+
+                <p class="blog-intro">
+                  Conheça a trajetória acadêmica e a motivação por trás
+                  do desenvolvimento do GUIAVOZ.
+                </p>
+
+                <span class="blog-read">Ler conteúdo</span>
+              </summary>
+
+              <div class="blog-content">
+                <div class="profile-row">
+                  <div class="profile-avatar" aria-hidden="true">GS</div>
+
+                  <div>
+                    <strong>Giovana Silva</strong>
+                    <span>
+                      Estudante de Análise e Desenvolvimento de Sistemas
+                    </span>
+                  </div>
+                </div>
+
+                <p>
+                  O GUIAVOZ é desenvolvido como um projeto acadêmico
+                  voltado à tecnologia assistiva, acessibilidade digital
+                  e criação de soluções que possam aumentar a autonomia
+                  de pessoas com deficiência visual.
+                </p>
+
+                <h4>Áreas trabalhadas no projeto</h4>
+
+                <ul>
+                  <li>Desenvolvimento mobile com Flutter.</li>
+                  <li>Comunicação Bluetooth Low Energy.</li>
+                  <li>Prototipação com ESP32 e sensores.</li>
+                  <li>Design de interfaces acessíveis.</li>
+                  <li>Pesquisa e documentação acadêmica.</li>
+                </ul>
+              </div>
+            </details>
+          </article>
+
+          <article class="blog-card reveal">
+            <details>
+              <summary>
+                <span class="blog-card-category">Roadmap</span>
+                <span class="blog-card-icon" aria-hidden="true">🚀</span>
+
+                <h3>Quais são os próximos passos do GUIAVOZ?</h3>
+
+                <p class="blog-intro">
+                  Veja o que já foi desenvolvido e quais etapas ainda
+                  fazem parte da evolução do projeto.
+                </p>
+
+                <span class="blog-read">Ler conteúdo</span>
+              </summary>
+
+              <div class="blog-content">
+                <p>
+                  O aplicativo e o novo site já representam uma base
+                  importante do projeto. A parte física será retomada
+                  quando os componentes estiverem disponíveis.
+                </p>
+
+                <ul class="roadmap-list">
+                  <li class="done">Desenvolvimento da interface do aplicativo.</li>
+                  <li class="done">Criação do site institucional.</li>
+                  <li class="done">Estrutura inicial de comunicação BLE.</li>
+                  <li>Integração completa com o protótipo físico.</li>
+                  <li>Testes controlados em ambientes internos.</li>
+                  <li>Aprimoramento dos alertas e da navegação.</li>
+                  <li>Expansão para novos espaços e pontos de interesse.</li>
+                </ul>
+              </div>
+            </details>
+          </article>
+
+          <article class="blog-card reveal">
+            <details>
+              <summary>
+                <span class="blog-card-category">Acessibilidade</span>
+                <span class="blog-card-icon" aria-hidden="true">♿</span>
+
+                <h3>O GUIAVOZ substitui a bengala?</h3>
+
+                <p class="blog-intro">
+                  Entenda o papel do aplicativo como uma tecnologia
+                  complementar de apoio à mobilidade.
+                </p>
+
+                <span class="blog-read">Ler conteúdo</span>
+              </summary>
+
+              <div class="blog-content">
+                <p>
+                  Não. O GUIAVOZ foi pensado como uma ferramenta
+                  complementar. Ele não substitui a bengala, o cão-guia
+                  nem as técnicas de orientação e mobilidade.
+                </p>
+
+                <p>
+                  A proposta é acrescentar uma nova camada de informação,
+                  emitindo alertas sobre escadas, portas, elevadores e
+                  outros pontos importantes em ambientes internos.
+                </p>
+
+                <p class="blog-note">
+                  Tecnologias assistivas devem ampliar escolhas e autonomia,
+                  respeitando as necessidades e preferências de cada usuário.
+                </p>
+              </div>
+            </details>
+          </article>
+
+          <article class="blog-card reveal">
+            <details>
+              <summary>
+                <span class="blog-card-category">Funcionamento</span>
+                <span class="blog-card-icon" aria-hidden="true">🌐</span>
+
+                <h3>O aplicativo precisa de internet para funcionar?</h3>
+
+                <p class="blog-intro">
+                  Saiba como a comunicação local permite emitir alertas
+                  mesmo sem uma conexão com a internet.
+                </p>
+
+                <span class="blog-read">Ler conteúdo</span>
+              </summary>
+
+              <div class="blog-content">
+                <p>
+                  A comunicação principal entre o sensor e o aplicativo
+                  acontece por Bluetooth Low Energy. Por isso, os alertas
+                  básicos não dependem de uma rede Wi-Fi ou de dados móveis.
+                </p>
+
+                <p>
+                  A internet poderá ser utilizada futuramente para recursos
+                  adicionais, como sincronização de informações, mapas ou
+                  atualizações, mas não é necessária para a comunicação local.
+                </p>
+              </div>
+            </details>
+          </article>
+
+          <article class="blog-card reveal">
+            <details>
+              <summary>
+                <span class="blog-card-category">Aplicativo</span>
+                <span class="blog-card-icon" aria-hidden="true">📱</span>
+
+                <h3>Como os alertas podem ser personalizados?</h3>
+
+                <p class="blog-intro">
+                  Voz, som e vibração podem ser combinados para atender
+                  diferentes situações e preferências.
+                </p>
+
+                <span class="blog-read">Ler conteúdo</span>
+              </summary>
+
+              <div class="blog-content">
+                <p>
+                  O usuário pode ativar ou desativar os principais tipos
+                  de alerta de acordo com o ambiente e com sua preferência.
+                </p>
+
+                <ul>
+                  <li>Voz para descrever o ponto detectado.</li>
+                  <li>Som para reforçar a presença de um alerta.</li>
+                  <li>Vibração para situações em que o áudio não é adequado.</li>
+                  <li>Tema claro ou escuro para melhorar o conforto visual.</li>
+                  <li>Compatibilidade planejada com leitores de tela.</li>
+                </ul>
+              </div>
+            </details>
           </article>
         </div>
       </div>
@@ -263,10 +621,12 @@ title="Tema escuro">
       <div class="container impact-grid">
         <div class="impact-copy reveal">
           <span class="section-label section-label-light">Impacto</span>
+
           <h2>Mais do que alertar obstáculos.</h2>
+
           <p>
-            O projeto busca contribuir para uma rotina com mais confiança,
-            independência e inclusão.
+            O projeto busca contribuir para uma rotina com mais
+            confiança, independência e inclusão.
           </p>
         </div>
 
@@ -275,10 +635,12 @@ title="Tema escuro">
             <strong>+ Acessibilidade</strong>
             <p>Recursos adaptados para diferentes formas de percepção.</p>
           </article>
+
           <article class="impact-card reveal">
             <strong>+ Autonomia</strong>
             <p>Menor dependência de terceiros em trajetos internos.</p>
           </article>
+
           <article class="impact-card reveal">
             <strong>+ Segurança</strong>
             <p>Alertas antecipados para pontos que exigem atenção.</p>
@@ -287,23 +649,37 @@ title="Tema escuro">
       </div>
     </section>
 
-    <section class="section section-soft" id="demonstracao">
+    <section
+      class="section section-soft"
+      id="demonstracao"
+    >
       <div class="container">
         <div class="section-heading reveal">
           <span class="section-label">Demonstração</span>
+
           <h2>Veja o GUIAVOZ em funcionamento.</h2>
-          <p>Conheça o fluxo de uso do projeto em um cenário acadêmico.</p>
+
+          <p>
+            Conheça o fluxo de uso do projeto em um cenário acadêmico.
+          </p>
         </div>
 
         <div class="demo-grid">
           <figure class="demo-card reveal">
             <div class="demo-media">
-              <video controls preload="metadata" aria-label="Vídeo de demonstração do GUIAVOZ">
+              <video
+                controls
+                preload="metadata"
+                aria-label="Vídeo de demonstração do GUIAVOZ"
+              >
                 <source src="video/video.mp4" type="video/mp4">
                 Seu navegador não oferece suporte ao vídeo.
               </video>
             </div>
-            <figcaption>Demonstração prática do funcionamento do protótipo.</figcaption>
+
+            <figcaption>
+              Demonstração prática do funcionamento do protótipo.
+            </figcaption>
           </figure>
 
           <figure class="demo-card reveal">
@@ -313,7 +689,10 @@ title="Tema escuro">
                 alt="Sequência ilustrando o alerta do GUIAVOZ próximo a uma escada"
               >
             </div>
-            <figcaption>Fluxo de aproximação, alerta e orientação ao usuário.</figcaption>
+
+            <figcaption>
+              Fluxo de aproximação, alerta e orientação ao usuário.
+            </figcaption>
           </figure>
         </div>
       </div>
@@ -323,46 +702,71 @@ title="Tema escuro">
       <div class="container contact-panel reveal">
         <div class="contact-copy">
           <span class="section-label">Contato</span>
+
           <h2>Vamos conversar sobre acessibilidade?</h2>
+
           <p>
-            Acompanhe o desenvolvimento, consulte a documentação ou entre em contato para colaborar.
+            Acompanhe o desenvolvimento, consulte a documentação
+            ou entre em contato para colaborar.
           </p>
         </div>
 
         <div class="contact-links">
-          <a href="mailto:seuemail@exemplo.com?subject=Contato%20sobre%20o%20GUIAVOZ">
+          <a
+            href="mailto:seuemail@exemplo.com?subject=Contato%20sobre%20o%20GUIAVOZ"
+          >
             <span aria-hidden="true">✉️</span>
+
             <div>
               <strong>E-mail</strong>
               <small>Enviar uma mensagem</small>
             </div>
+
             <span aria-hidden="true">↗</span>
           </a>
 
-          <a href="https://github.com/Giovanaasilvaa/Projeto-GuiaVoz" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://github.com/Giovanaasilvaa/Projeto-GuiaVoz"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <span aria-hidden="true">💻</span>
+
             <div>
               <strong>GitHub</strong>
               <small>Acessar o repositório</small>
             </div>
+
             <span aria-hidden="true">↗</span>
           </a>
 
-          <a href="https://drive.google.com/file/d/1L2_vs25EZSUIpzRx0R827iwrHV7E4aRe/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://drive.google.com/file/d/1L2_vs25EZSUIpzRx0R827iwrHV7E4aRe/view?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <span aria-hidden="true">📄</span>
+
             <div>
               <strong>Documentação</strong>
               <small>Conhecer os detalhes técnicos</small>
             </div>
+
             <span aria-hidden="true">↗</span>
           </a>
 
-          <a href="https://www.instagram.com/guia.voz" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://www.instagram.com/guia.voz/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <span aria-hidden="true">📷</span>
+
             <div>
               <strong>Instagram</strong>
               <small>Acompanhar o projeto</small>
             </div>
+
             <span aria-hidden="true">↗</span>
           </a>
         </div>
@@ -370,26 +774,69 @@ title="Tema escuro">
     </section>
   </main>
 
-  <div class="chatbot" id="chatbot" aria-hidden="true">
+  <div
+    class="chatbot"
+    id="chatbot"
+    aria-hidden="true"
+  >
     <div class="chatbot-header">
       <div>
         <small>Assistente virtual</small>
         <h2>Dúvidas sobre o GUIAVOZ</h2>
       </div>
-      <button id="closeChatbot" class="chatbot-close" type="button" aria-label="Fechar assistente">×</button>
+
+      <button
+        id="closeChatbot"
+        class="chatbot-close"
+        type="button"
+        aria-label="Fechar assistente"
+      >
+        ×
+      </button>
     </div>
 
-    <div class="chatbot-messages" id="chatbotMessages" aria-live="polite">
+    <div
+      class="chatbot-messages"
+      id="chatbotMessages"
+      aria-live="polite"
+    >
       <div class="message bot-message">
         Olá! Selecione uma pergunta para conhecer melhor o projeto.
       </div>
     </div>
 
     <div class="chatbot-questions">
-      <button class="question-btn" type="button" data-question="1">O que é o GUIAVOZ?</button>
-      <button class="question-btn" type="button" data-question="2">Como o sistema funciona?</button>
-      <button class="question-btn" type="button" data-question="3">Quem pode utilizar?</button>
-      <button class="question-btn" type="button" data-question="4">Em que fase está o projeto?</button>
+      <button
+        class="question-btn"
+        type="button"
+        data-question="1"
+      >
+        O que é o GUIAVOZ?
+      </button>
+
+      <button
+        class="question-btn"
+        type="button"
+        data-question="2"
+      >
+        Como o sistema funciona?
+      </button>
+
+      <button
+        class="question-btn"
+        type="button"
+        data-question="3"
+      >
+        Quem pode utilizar?
+      </button>
+
+      <button
+        class="question-btn"
+        type="button"
+        data-question="4"
+      >
+        Em que fase está o projeto?
+      </button>
     </div>
   </div>
 
@@ -411,27 +858,42 @@ title="Tema escuro">
         <span class="brand-symbol">
           <img src="imgs/logosemfundo.png" alt="">
         </span>
+
         <span>GUIAVOZ</span>
       </a>
 
-      <p>Facilitando a mobilidade e a acessibilidade por meio da tecnologia.</p>
-      <small>Projeto acadêmico desenvolvido por Giovana — FATEC / FETEPS.</small>
+      <p>
+        Facilitando a mobilidade e a acessibilidade por meio da tecnologia.
+      </p>
+
+      <small>
+        Projeto acadêmico desenvolvido por Giovana — FATEC / FETEPS.
+      </small>
     </div>
   </footer>
 
-  <div class="sr-only" id="ariaStatus" aria-live="polite"></div>
+  <div
+    class="sr-only"
+    id="ariaStatus"
+    aria-live="polite"
+  ></div>
 
   <div vw class="enabled">
     <div vw-access-button class="active"></div>
+
     <div vw-plugin-wrapper>
       <div class="vw-plugin-top-wrapper"></div>
     </div>
   </div>
 
   <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+
   <script>
-    new window.VLibras.Widget('https://vlibras.gov.br/app');
+    if (window.VLibras) {
+      new window.VLibras.Widget("https://vlibras.gov.br/app");
+    }
   </script>
+
   <script src="scripts/script.js" defer></script>
 </body>
 </html>
